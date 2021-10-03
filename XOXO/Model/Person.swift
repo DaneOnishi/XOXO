@@ -11,6 +11,8 @@ class Person: Codable {
     let id: String
     var name: String
     var photo: String
+    var archivesMentionedID: [String] = []
+    var archivesAuthoredID: [String] = []
     
     internal init(name: String, id: String, photo: String) {
         self.id = id

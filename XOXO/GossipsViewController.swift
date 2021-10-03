@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ArchivesViewController: UIViewController {
+class GossipsViewController: UIViewController {
     
-    
-    
-    @IBOutlet weak var archiveCollectionView: UICollectionView!
+    @IBOutlet weak var gossipCollectionView: UICollectionView!
     @IBOutlet weak var viewBar: UIView!
-    var archives = Archive.FetchArchives()
+    var gossips: [Gossip] = []
     var cellScale : CGFloat = 0.6
     
     override func viewDidLoad() {
@@ -29,21 +27,25 @@ class ArchivesViewController: UIViewController {
         
         //   layout.itemSize = CGSize(width: cellWidth, height: cellHeight )
         //    archiveCollectionView.contentInset = UIEdgeInsets(top: instY , left: instX , bottom: instY, right: instX )
-        archiveCollectionView.dataSource = self
+        gossipCollectionView.dataSource = self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        gossips = GossipRepository.shared.fetchGossips()
     }
 }
 
-extension ArchivesViewController : UICollectionViewDataSource  {
+extension GossipsViewController : UICollectionViewDataSource  {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return archives.count
+        return gossips.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArchivesCell", for: indexPath) as! ArchiveCollectionViewCell
-        let archive = archives[indexPath.item]
-        cell.archive = archive
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GossipsCell", for: indexPath) as! GossipCollectionViewCell
+        let gossip = gossips[indexPath.item]
+        cell.gossip = gossip
         return cell 
     }
     
@@ -53,3 +55,8 @@ extension ArchivesViewController : UICollectionViewDataSource  {
     
 }
 
+extension GossipsViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+    }
+}

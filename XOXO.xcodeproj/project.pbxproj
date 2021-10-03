@@ -14,15 +14,16 @@
 		415DC7072703884E00561EDD /* XOXO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 415DC7052703884E00561EDD /* XOXO.xcdatamodeld */; };
 		415DC7092703885000561EDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 415DC7082703885000561EDD /* Assets.xcassets */; };
 		415DC70C2703885000561EDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415DC70A2703885000561EDD /* LaunchScreen.storyboard */; };
-		41DA6305270669E500F8CF77 /* ArchiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA6304270669E500F8CF77 /* ArchiveCollectionViewCell.swift */; };
+		41DA6305270669E500F8CF77 /* GossipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA6304270669E500F8CF77 /* GossipCollectionViewCell.swift */; };
 		41DA6307270673A900F8CF77 /* Archives.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA6306270673A900F8CF77 /* Archives.swift */; };
-		41DA630927067A6F00F8CF77 /* ArchivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA630827067A6F00F8CF77 /* ArchivesViewController.swift */; };
+		41DA630927067A6F00F8CF77 /* GossipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA630827067A6F00F8CF77 /* GossipsViewController.swift */; };
 		41DA630B2706B75D00F8CF77 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA630A2706B75D00F8CF77 /* SplashScreenViewController.swift */; };
 		41DA630D2708F2C600F8CF77 /* Gossip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA630C2708F2C600F8CF77 /* Gossip.swift */; };
 		41DA630F2708F58E00F8CF77 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA630E2708F58E00F8CF77 /* Person.swift */; };
 		41DA63142708F6B800F8CF77 /* PersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA63132708F6B800F8CF77 /* PersonRepository.swift */; };
 		41DA63162708F6CC00F8CF77 /* GossipRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA63152708F6CC00F8CF77 /* GossipRepository.swift */; };
 		41DA63192708F81C00F8CF77 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA63182708F81C00F8CF77 /* String+.swift */; };
+		41DA631B270907F500F8CF77 /* ArchiveRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA631A270907F500F8CF77 /* ArchiveRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,15 +36,16 @@
 		415DC7082703885000561EDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		415DC70B2703885000561EDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		415DC70D2703885000561EDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41DA6304270669E500F8CF77 /* ArchiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCollectionViewCell.swift; sourceTree = "<group>"; };
+		41DA6304270669E500F8CF77 /* GossipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GossipCollectionViewCell.swift; sourceTree = "<group>"; };
 		41DA6306270673A900F8CF77 /* Archives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archives.swift; sourceTree = "<group>"; };
-		41DA630827067A6F00F8CF77 /* ArchivesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivesViewController.swift; sourceTree = "<group>"; };
+		41DA630827067A6F00F8CF77 /* GossipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GossipsViewController.swift; sourceTree = "<group>"; };
 		41DA630A2706B75D00F8CF77 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		41DA630C2708F2C600F8CF77 /* Gossip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gossip.swift; sourceTree = "<group>"; };
 		41DA630E2708F58E00F8CF77 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		41DA63132708F6B800F8CF77 /* PersonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRepository.swift; sourceTree = "<group>"; };
 		41DA63152708F6CC00F8CF77 /* GossipRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GossipRepository.swift; sourceTree = "<group>"; };
 		41DA63182708F81C00F8CF77 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		41DA631A270907F500F8CF77 /* ArchiveRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +87,9 @@
 				415DC70A2703885000561EDD /* LaunchScreen.storyboard */,
 				415DC70D2703885000561EDD /* Info.plist */,
 				415DC7052703884E00561EDD /* XOXO.xcdatamodeld */,
-				41DA6304270669E500F8CF77 /* ArchiveCollectionViewCell.swift */,
+				41DA6304270669E500F8CF77 /* GossipCollectionViewCell.swift */,
 				41DA63102708F63B00F8CF77 /* Model */,
-				41DA630827067A6F00F8CF77 /* ArchivesViewController.swift */,
+				41DA630827067A6F00F8CF77 /* GossipsViewController.swift */,
 				41DA63172708F6D200F8CF77 /* Repositories */,
 				41DA63182708F81C00F8CF77 /* String+.swift */,
 			);
@@ -109,6 +111,7 @@
 			children = (
 				41DA63132708F6B800F8CF77 /* PersonRepository.swift */,
 				41DA63152708F6CC00F8CF77 /* GossipRepository.swift */,
+				41DA631A270907F500F8CF77 /* ArchiveRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -189,12 +192,13 @@
 				415DC7012703884E00561EDD /* ViewController.swift in Sources */,
 				41DA630B2706B75D00F8CF77 /* SplashScreenViewController.swift in Sources */,
 				41DA63162708F6CC00F8CF77 /* GossipRepository.swift in Sources */,
+				41DA631B270907F500F8CF77 /* ArchiveRepository.swift in Sources */,
 				415DC6FD2703884E00561EDD /* AppDelegate.swift in Sources */,
 				415DC6FF2703884E00561EDD /* SceneDelegate.swift in Sources */,
-				41DA6305270669E500F8CF77 /* ArchiveCollectionViewCell.swift in Sources */,
+				41DA6305270669E500F8CF77 /* GossipCollectionViewCell.swift in Sources */,
 				415DC7072703884E00561EDD /* XOXO.xcdatamodeld in Sources */,
 				41DA630D2708F2C600F8CF77 /* Gossip.swift in Sources */,
-				41DA630927067A6F00F8CF77 /* ArchivesViewController.swift in Sources */,
+				41DA630927067A6F00F8CF77 /* GossipsViewController.swift in Sources */,
 				41DA63192708F81C00F8CF77 /* String+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

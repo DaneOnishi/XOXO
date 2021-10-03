@@ -35,7 +35,7 @@ class SplashScreenViewController: UIViewController {
                 } completion: { _ in
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
                         let storyboard = UIStoryboard(name: "ArchivesViewController", bundle: nil)
-                        guard let homeVC = storyboard.instantiateViewController(identifier: "ArchivesViewController") as? ArchivesViewController else {
+                        guard let homeVC = storyboard.instantiateViewController(identifier: "ArchivesViewController") as? GossipsViewController else {
                             return
                         }
                         homeVC.modalPresentationStyle = .fullScreen

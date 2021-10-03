@@ -9,7 +9,17 @@ import Foundation
 
 class GossipRepository {
     static let shared = GossipRepository()
+    
+    lazy var personRepository = {
+        PersonRepository.shared
+    }()
+    
+    lazy var archiveRepository = {
+        ArchiveRepository.shared
+    }()
+
     let gossipListKey = "gossipListKey"
+    
     private init() {}
     
     func createGossip(name: String, creationDate: Date, summary: String?) -> Gossip {
@@ -19,7 +29,8 @@ class GossipRepository {
     }
     
     func saveGossip(gossip: Gossip) {
-        UserDefaults.standard.set(gossip, forKey: gossip.id)
+        let data = try! JSONEncoder().encode(gossip)
+        UserDefaults.standard.set(data, forKey: gossip.id)
         
         var list = getGossipListIDs()
         list.append(gossip.id)
@@ -27,16 +38,53 @@ class GossipRepository {
     }
     
     func addArchive(_ archive: Archive, to gossip: Gossip) -> Gossip {
-        // Adiciona archive na gossip
-        // Salva a gossip
-        // Retorna a gossip modificada
+        archive.gossipID = gossip.id
+        archiveRepository.saveArchive(archive: archive)
+        
+        gossip.archivesIDs.append(archive.id)
+        saveGossip(gossip: gossip)
+        
         return gossip
     }
     
-    func removeGossip(gossip: Gossip) {
-        // Pega os arquivos dela
-        // Deleta cada arquivo avisando a gossip
-        // Deleta a gossip
+    
+    func deleteGossip(gossip: Gossip) {
+        let gossipArchives = archiveRepository.fetchArchives(gossipID: gossip.id)
+        for archive in gossipArchives {
+            archiveRepository.deleteArchive(archive: archive)
+        }
+        
+        UserDefaults.standard.removeObject(forKey: gossip.id)
+        
+        var list = getGossipListIDs()
+        list.removeAll { id in
+            id == gossip.id
+        }
+        saveGossipListIDs(ids: list)
+    }
+    
+    func fetchGossips() -> [Gossip] {
+        //pega todas as gossips
+        let list = getGossipListIDs()
+        
+        var gossipList: [Gossip] = []
+        
+        for id in list {
+            let gossip = fetchGossip(id:id)
+            if let gossip = gossip {
+                gossipList.append(gossip)
+            }
+        }
+        
+        return gossipList
+    }
+    
+    
+    func fetchGossip(id: String) -> Gossip? {
+        // pega uma gossip dado o ID da gossip
+        guard let data = UserDefaults.standard.object(forKey: id) as? Data else { return nil }
+        return try?
+            JSONDecoder().decode(Gossip.self, from: data)
     }
     
     private func getGossipListIDs() -> [String] {

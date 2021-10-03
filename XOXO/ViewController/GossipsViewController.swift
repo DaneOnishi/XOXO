@@ -54,6 +54,12 @@ extension GossipsViewController : UICollectionViewDataSource  {
 
 extension GossipsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        let gossip = gossips[indexPath.item]
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "ArchiveViewController") as! ArchiveViewController
+        vc.gossip = gossip
+        
+        self.present(vc, animated: true, completion: nil)
     }
 }

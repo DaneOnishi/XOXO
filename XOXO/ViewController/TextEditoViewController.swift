@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TextEditorViewControllerDelegate: AnyObject {
+    func didCreateArchive()
+}
+
 class TextEditoViewController: UIViewController {
 
     var people: [Person] = []
@@ -18,6 +22,7 @@ class TextEditoViewController: UIViewController {
     var selectedMentionedPeopleIndexes: [Int] = []
     var gossip: Gossip?
 
+    weak var delegate: TextEditorViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +61,7 @@ class TextEditoViewController: UIViewController {
             _ = PersonRepository.shared.addArchiveAsMentioning(archive, person: mentionedPeople)
         }
         
+        delegate?.didCreateArchive()
         self.dismiss(animated: true, completion: nil)
     }
 }

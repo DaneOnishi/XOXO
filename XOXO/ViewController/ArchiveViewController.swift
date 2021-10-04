@@ -50,6 +50,7 @@ class ArchiveViewController: UIViewController, UIGestureRecognizerDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "TextEditoViewController") as! TextEditoViewController
         vc.gossip = gossip
+        vc.delegate = self
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -118,4 +119,11 @@ extension ArchiveViewController: UICollectionViewDelegate {
         
         self.present(vc, animated: true, completion: nil)
     }
+}
+
+extension ArchiveViewController: TextEditorViewControllerDelegate {
+    func didCreateArchive() {
+        reloadCollection()
+    }
+    
 }

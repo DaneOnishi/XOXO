@@ -32,9 +32,13 @@ class GossipRepository {
         let data = try! JSONEncoder().encode(gossip)
         UserDefaults.standard.set(data, forKey: gossip.id)
         
+        
         var list = getGossipListIDs()
-        list.append(gossip.id)
-        saveGossipListIDs(ids: list)
+        if !list.contains(gossip.id) {
+            list.append(gossip.id)
+            saveGossipListIDs(ids: list)
+        }
+        
     }
     
     func addArchive(_ archive: Archive, to gossip: Gossip) -> Gossip {

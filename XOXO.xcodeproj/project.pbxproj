@@ -29,6 +29,12 @@
 		41DA632A270A3E0200F8CF77 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA6329270A3E0200F8CF77 /* ShareViewController.swift */; };
 		41DA632D270A3E0200F8CF77 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DA632B270A3E0200F8CF77 /* MainInterface.storyboard */; };
 		41DA6331270A3E0200F8CF77 /* SharedText.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 41DA6327270A3E0200F8CF77 /* SharedText.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		41DA6337270A61C700F8CF77 /* TextEditoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA6336270A61C700F8CF77 /* TextEditoViewController.swift */; };
+		41DA633D270A666100F8CF77 /* PeopleMentionedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA633C270A666100F8CF77 /* PeopleMentionedCollectionViewCell.swift */; };
+		41DA633F270A666D00F8CF77 /* OriginPersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA633E270A666D00F8CF77 /* OriginPersonCollectionViewCell.swift */; };
+		41DA6341270A7F5100F8CF77 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA6340270A7F5100F8CF77 /* UIImage+.swift */; };
+		41DA6343270A9D8500F8CF77 /* GossipReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA6342270A9D8500F8CF77 /* GossipReportViewController.swift */; };
+		41DA6345270ABB5800F8CF77 /* PeopleMentionedReportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA6344270ABB5800F8CF77 /* PeopleMentionedReportCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +87,12 @@
 		41DA6329270A3E0200F8CF77 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		41DA632C270A3E0200F8CF77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		41DA632E270A3E0200F8CF77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41DA6336270A61C700F8CF77 /* TextEditoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditoViewController.swift; sourceTree = "<group>"; };
+		41DA633C270A666100F8CF77 /* PeopleMentionedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleMentionedCollectionViewCell.swift; sourceTree = "<group>"; };
+		41DA633E270A666D00F8CF77 /* OriginPersonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginPersonCollectionViewCell.swift; sourceTree = "<group>"; };
+		41DA6340270A7F5100F8CF77 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		41DA6342270A9D8500F8CF77 /* GossipReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GossipReportViewController.swift; sourceTree = "<group>"; };
+		41DA6344270ABB5800F8CF77 /* PeopleMentionedReportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleMentionedReportCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,9 +174,11 @@
 			isa = PBXGroup;
 			children = (
 				415DC7002703884E00561EDD /* ViewController.swift */,
+				41DA6336270A61C700F8CF77 /* TextEditoViewController.swift */,
 				41DA630A2706B75D00F8CF77 /* SplashScreenViewController.swift */,
 				41DA631C270984A300F8CF77 /* ArchiveViewController.swift */,
 				41DA630827067A6F00F8CF77 /* GossipsViewController.swift */,
+				41DA6342270A9D8500F8CF77 /* GossipReportViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -173,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				41DA63182708F81C00F8CF77 /* String+.swift */,
+				41DA6340270A7F5100F8CF77 /* UIImage+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -182,6 +197,9 @@
 			children = (
 				41DA6304270669E500F8CF77 /* GossipCollectionViewCell.swift */,
 				41DA6320270A065B00F8CF77 /* ArchiveCollectionViewCell.swift */,
+				41DA633C270A666100F8CF77 /* PeopleMentionedCollectionViewCell.swift */,
+				41DA633E270A666D00F8CF77 /* OriginPersonCollectionViewCell.swift */,
+				41DA6344270ABB5800F8CF77 /* PeopleMentionedReportCollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -302,16 +320,22 @@
 				41DA6307270673A900F8CF77 /* Archives.swift in Sources */,
 				41DA6321270A065B00F8CF77 /* ArchiveCollectionViewCell.swift in Sources */,
 				415DC7012703884E00561EDD /* ViewController.swift in Sources */,
+				41DA6345270ABB5800F8CF77 /* PeopleMentionedReportCollectionViewCell.swift in Sources */,
 				41DA630B2706B75D00F8CF77 /* SplashScreenViewController.swift in Sources */,
 				41DA63162708F6CC00F8CF77 /* GossipRepository.swift in Sources */,
+				41DA633D270A666100F8CF77 /* PeopleMentionedCollectionViewCell.swift in Sources */,
 				41DA631B270907F500F8CF77 /* ArchiveRepository.swift in Sources */,
 				415DC6FD2703884E00561EDD /* AppDelegate.swift in Sources */,
 				415DC6FF2703884E00561EDD /* SceneDelegate.swift in Sources */,
 				41DA6305270669E500F8CF77 /* GossipCollectionViewCell.swift in Sources */,
 				415DC7072703884E00561EDD /* XOXO.xcdatamodeld in Sources */,
 				41DA630D2708F2C600F8CF77 /* Gossip.swift in Sources */,
+				41DA6343270A9D8500F8CF77 /* GossipReportViewController.swift in Sources */,
+				41DA633F270A666D00F8CF77 /* OriginPersonCollectionViewCell.swift in Sources */,
 				41DA630927067A6F00F8CF77 /* GossipsViewController.swift in Sources */,
 				41DA631D270984A300F8CF77 /* ArchiveViewController.swift in Sources */,
+				41DA6341270A7F5100F8CF77 /* UIImage+.swift in Sources */,
+				41DA6337270A61C700F8CF77 /* TextEditoViewController.swift in Sources */,
 				41DA63192708F81C00F8CF77 /* String+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

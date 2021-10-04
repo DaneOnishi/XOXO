@@ -22,9 +22,9 @@ class ArchiveRepository {
     
     private init() {}
     
-    func createArchive(title: String, archiveDate: Date, gossipDate: Date, gossipID: String) -> Archive {
+    func createArchive(title: String?, archiveDate: Date, text: String, gossipID: String) -> Archive {
         let id = String.randomString(length: 20)
-        let archive = Archive(id: id, title: title, archiveDate: archiveDate, gossipDate: gossipDate, gossipID: gossipID)
+        let archive = Archive(id: id, archiveDate: archiveDate, text: text, gossipID: gossipID)
         return archive
     }
     
@@ -34,8 +34,10 @@ class ArchiveRepository {
         UserDefaults.standard.set(data, forKey: archive.id)
         
         var list = getArchiveListIDs()
-        list.append(archive.id)
-        saveArchiveListIDs(ids: list)
+        if !list.contains(archive.id) {
+            list.append(archive.id)
+            saveArchiveListIDs(ids: list)
+        }
     }
     
     func deleteArchive(archive: Archive) {

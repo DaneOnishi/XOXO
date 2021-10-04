@@ -22,7 +22,7 @@ class PersonRepository {
     
     private init() {}
     
-    func addPerson(name: String , photo: String) -> Person {
+    func createPerson(name: String , photo: String) -> Person {
         let id = String.randomString(length: 20)
         let person = Person(name: name, id: id, photo: photo)
         return person
@@ -84,7 +84,6 @@ class PersonRepository {
             }
             
         }
-        
         return peopleList
     }
     

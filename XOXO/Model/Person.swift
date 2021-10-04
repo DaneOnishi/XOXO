@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Person: Codable {
     let id: String
@@ -13,6 +14,10 @@ class Person: Codable {
     var photo: String
     var archivesMentionedID: [String] = []
     var archivesAuthoredID: [String] = []
+    
+    var photoAsImage: UIImage {
+        photo.convertBase64StringToImage()
+    }
     
     internal init(name: String, id: String, photo: String) {
         self.id = id
